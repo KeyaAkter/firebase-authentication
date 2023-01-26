@@ -6,24 +6,24 @@ const Navbar = () => {
       <Link to="/" className="font-medium text-orange-500">
         Firebase Killer
       </Link>
-      <ul className="links">
+      <ul className="links flex gap-10">
         <li>
-          <Link to="/" className="">
+          <Link to="/" className="hover:text-orange-500 duration-500">
             Home
           </Link>
         </li>
         <li>
-          <Link to="/about" className="">
+          <Link to="/about" className="hover:text-orange-500 duration-500">
             About
           </Link>
         </li>
         <li>
-          <Link to="/profile" className="">
+          <Link to="/profile" className="hover:text-orange-500 duration-500">
             Profile
           </Link>
         </li>
         <li>
-          <Link to="/login" className="">
+          <Link to="/login" className="hover:text-orange-500 duration-500">
             Login
           </Link>
         </li>
