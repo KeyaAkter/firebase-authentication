@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import RequireAuth from "./components/RequireAuth";
-import RequireAuth2 from "./components/RequireAuth2";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -43,21 +42,10 @@ const App = () => {
             </RequireAuth>
           }
         />
-        <Route
-          path="/login"
-          element={
-            <RequireAuth2 user={user}>
-              <Login />
-            </RequireAuth2>
-          }
-        />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/register"
-          element={
-            <RequireAuth2 user={user}>
-              <Register />
-            </RequireAuth2>
-          }
+          element={<Register user={user} setUser={setUser} />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
